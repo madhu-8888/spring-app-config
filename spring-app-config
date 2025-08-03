@@ -1,0 +1,8 @@
+eureka:
+  client:
+    fetch-registry: true    # Enables service to discover others
+    register-with-eureka: true  # Registers this service with Eureka
+    service-url:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}  # Uses env var if available
+  instance:
+    prefer-ip-address: true  # Registers using IP instead of hostname
